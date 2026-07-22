@@ -1,0 +1,15 @@
+# ADR-0049 - Expérience d'ouverture Velvet
+
+Décision validée.
+
+Au lancement de Velvet, un ruban rouge Velvet apparaît sur un fond premium et épuré. Il s'anime avec fluidité pour former le `V` du logo.
+
+Une fois le logo formé :
+- Le nom Velvet apparaît.
+- Le message `Bienvenue` est affiché.
+- Une courte phrase présente la communauté.
+- Deux actions sont proposées : `Se connecter` et `Rejoindre la communauté`.
+
+L'animation doit rester courte, fluide et facilement réalisable. Elle peut être ignorée ou raccourcie lors des ouvertures suivantes.
+
+Cette séquence constitue la signature visuelle d'entrée dans l'univers Velvet.
