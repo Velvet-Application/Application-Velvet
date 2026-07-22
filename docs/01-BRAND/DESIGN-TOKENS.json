@@ -1,0 +1,62 @@
+{
+  "$schema": "https://design-tokens.github.io/community-group/format/",
+  "meta": {
+    "name": "Velvet Design Tokens",
+    "version": "1.0.0",
+    "status": "validated",
+    "tagline": "Là où les plus belles rencontres commencent."
+  },
+  "color": {
+    "velvetBlack": { "$value": "#0D0D0D", "$type": "color" },
+    "anthracite": { "$value": "#1B1B1D", "$type": "color" },
+    "velourGray": { "$value": "#2D2D30", "$type": "color" },
+    "ivory": { "$value": "#F4F4F2", "$type": "color" },
+    "velvetBurgundy": { "$value": "#641B36", "$type": "color" },
+    "champagneGold": { "$value": "#C6A96A", "$type": "color" },
+    "success": { "$value": "#54A86B", "$type": "color" },
+    "warning": { "$value": "#D6A75D", "$type": "color" },
+    "danger": { "$value": "#C64157", "$type": "color" }
+  },
+  "semantic": {
+    "backgroundPrimary": { "$value": "{color.velvetBlack}", "$type": "color" },
+    "backgroundRaised": { "$value": "{color.anthracite}", "$type": "color" },
+    "surfaceCard": { "$value": "{color.anthracite}", "$type": "color" },
+    "surfaceSubtle": { "$value": "{color.velourGray}", "$type": "color" },
+    "textPrimary": { "$value": "{color.ivory}", "$type": "color" },
+    "textSecondary": { "$value": "#B8B5B0", "$type": "color" },
+    "brandPrimary": { "$value": "{color.velvetBurgundy}", "$type": "color" },
+    "brandAccent": { "$value": "{color.champagneGold}", "$type": "color" },
+    "borderSubtle": { "$value": "#3A3637", "$type": "color" }
+  },
+  "typography": {
+    "uiFamily": { "$value": "Poppins, Montserrat, system-ui, sans-serif", "$type": "fontFamily" },
+    "editorialFamily": { "$value": "Playfair Display, Lora, serif", "$type": "fontFamily" },
+    "weightRegular": { "$value": 400, "$type": "fontWeight" },
+    "weightMedium": { "$value": 500, "$type": "fontWeight" },
+    "weightSemibold": { "$value": 600, "$type": "fontWeight" }
+  },
+  "radius": {
+    "small": { "$value": "8px", "$type": "dimension" },
+    "medium": { "$value": "14px", "$type": "dimension" },
+    "large": { "$value": "22px", "$type": "dimension" },
+    "pill": { "$value": "999px", "$type": "dimension" }
+  },
+  "spacing": {
+    "2xs": { "$value": "4px", "$type": "dimension" },
+    "xs": { "$value": "8px", "$type": "dimension" },
+    "sm": { "$value": "12px", "$type": "dimension" },
+    "md": { "$value": "16px", "$type": "dimension" },
+    "lg": { "$value": "24px", "$type": "dimension" },
+    "xl": { "$value": "32px", "$type": "dimension" },
+    "2xl": { "$value": "48px", "$type": "dimension" }
+  },
+  "motion": {
+    "fast": { "$value": "140ms", "$type": "duration" },
+    "normal": { "$value": "220ms", "$type": "duration" },
+    "slow": { "$value": "360ms", "$type": "duration" },
+    "easing": { "$value": [0.2, 0.8, 0.2, 1], "$type": "cubicBezier" }
+  },
+  "shadow": {
+    "card": { "$value": { "color": "#00000066", "offsetX": "0px", "offsetY": "8px", "blur": "24px", "spread": "0px" }, "$type": "shadow" }
+  }
+}
