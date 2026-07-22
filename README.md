@@ -1,26 +1,45 @@
 # Velvet OS
 
-Velvet OS est la source de vérité documentaire du projet Velvet.
+Velvet OS est la source de vérité produit, UX et technique de Velvet. Ce dépôt doit permettre à une équipe de développement ou à CODEX de comprendre ce qui est validé, ce qui reste à arbitrer et dans quel ordre construire la maquette V1 puis la version de production.
 
-## Objectif
-Centraliser dans GitHub la vision, l’ADN de marque, les décisions produit, les fonctionnalités, les parcours UX, les règles de consentement et de confiance, l’intelligence Velvet, l’écosystème professionnel, les événements, le modèle économique, les choix techniques et l’historique.
+## Démarrage rapide pour CODEX
 
-## Ordre de lecture
-1. `PROJECT_CONTEXT.md`
-2. `docs/00-VISION/`
-3. `docs/01-BRAND/`
-4. `docs/02-PRODUCT/PRODUCT_BIBLE.md`
-5. `docs/03-ADR/`
-6. `docs/04-FEATURES/`
-7. `docs/05-UX/`
-8. `docs/06-AI/`
-9. `docs/07-PROFESSIONALS/`
-10. `docs/08-EVENTS/`
-11. `docs/09-BUSINESS/`
-12. `docs/10-TECH/`
-13. `docs/11-ROADMAP/`
-14. `docs/12-FOUNDER-NOTES/`
-15. `docs/13-HISTORY/`
+Lire dans cet ordre :
 
-## Statut
-Cette version reconstruit le patrimoine produit disponible dans les échanges accessibles au moment de sa création. Elle constitue une base complète et versionnable, mais ne reproduit pas mot pour mot les conversations qui ne sont plus accessibles dans leur intégralité.
+1. `CODEX.md`
+2. `PROJECT_CONTEXT.md`
+3. `docs/02-PRODUCT/PRODUCT_BIBLE.md`
+4. `docs/10-TECH/V1-DELIVERY-BLUEPRINT.md`
+5. `docs/11-ROADMAP/V1-SCOPE-AND-ACCEPTANCE.md`
+6. Les ADR du module concerné
+
+## Hiérarchie documentaire
+
+1. `docs/00-GOVERNANCE/` — règles de décision et de contribution
+2. `docs/00-VISION/` — vision et principes fondateurs
+3. `docs/01-BRAND/` — identité et ton
+4. `docs/02-PRODUCT/` — Product Bible et périmètre fonctionnel
+5. `docs/03-ADR/` — décisions transverses
+6. `docs/04-VELVET-CONVERSATIONS/` — décisions du chantier Conversations
+7. `docs/04-FEATURES/` — spécifications par fonctionnalité
+8. `docs/05-UX/` — parcours et règles d'interface
+9. `docs/06-AI/` — Velvet Intelligence et Velvet Memory
+10. `docs/07-PROFESSIONALS/` — espace professionnel
+11. `docs/08-EVENTS/` — événements, sorties et voyages
+12. `docs/09-BUSINESS/` — modèle économique
+13. `docs/10-TECH/` — architecture et livraison
+14. `docs/11-ROADMAP/` — versions, priorités et critères d'acceptation
+15. `docs/12-FOUNDER-NOTES/` — notes non normatives
+16. `docs/13-HISTORY/` — historique du projet
+
+## Règles de vérité
+
+- Une décision explicitement validée est normative.
+- Une proposition non validée est marquée `TBD` et ne doit pas être codée comme une règle définitive.
+- Une décision validée produit un ADR et un commit Git dédié.
+- En cas de conflit, l'ADR le plus récent remplace l'ancien.
+- CODEX ne doit pas inventer une règle métier manquante : il crée un point `TBD` ou une issue.
+
+## État actuel
+
+Le dépôt contient le socle documentaire de Velvet et les premières décisions détaillées du chantier Velvet Conversations. La structure technique V1 est conçue pour transformer progressivement la documentation en backlog exécutable, maquette fonctionnelle puis application prête à déployer.
