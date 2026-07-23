@@ -8,6 +8,8 @@
 - Une nouvelle proposition ne remplace une décision existante qu'avec un nouvel ADR indiquant clairement ce qu'elle modifie.
 - Ce registre est un index ; l'ADR reste la source normative.
 - Avant de poser une question produit ou d'ouvrir une issue, rechercher ici puis dans les ADR.
+- Chaque ADR acceptée doit être documentée et réellement commitée avant de poursuivre la discussion produit.
+- « Go commits » signifie appliquer les changements au dépôt GitHub actif, créer les commits réels et communiquer leurs références.
 
 ## Décisions validées — synthèse
 
@@ -29,10 +31,15 @@
 - Accueil sous forme de découverte intelligente personnalisée.
 - Catégories et filtres restent accessibles pour les recherches ciblées.
 - Ne pas rouvrir ce choix sans nouvelle décision formelle.
+- Les profils abandonnés ou durablement inactifs sont progressivement retirés des recommandations.
 
-### Comptes et profils
+### Comptes, identité et profils
 
 - Trois types de comptes : Membre, Organisateur privé, Professionnel.
+- La vérification d'identité et de majorité est obligatoire avant l'accès complet à Velvet.
+- L'identité civile vérifiée reste privée ; le pseudonyme constitue l'identité publique.
+- Chaque profil dispose d'un nom d'affichage libre et d'un `@username` unique et stable.
+- Les pseudonymes liés aux codes du libertinage sont autorisés ; seuls les contenus illégaux, haineux, liés aux mineurs, frauduleux, usurpateurs ou manifestement abusifs sont refusés.
 - Tous les profils conservent la même qualité visuelle, sans hiérarchie graphique liée à l'ancienneté ou à la popularité.
 - L'ancienneté peut être mise en avant après une durée significative.
 - Vidéo de présentation facultative.
@@ -40,6 +47,23 @@
 - Profils Couple dynamiques : identité Couple et partenaires individuels activables indépendamment.
 - Carte Couple : photo commune et portraits individuels.
 - Albums publics et privés déjà arbitrés ; ne pas rouvrir leur principe sans consulter les ADR associés.
+
+### Modération
+
+- Modération hybride avec première vérification par IA.
+- Les cas ambigus, sensibles, signalés ou à risque sont transmis à un modérateur humain.
+- Pendant la validation d'un remplacement, l'ancien contenu approuvé reste visible.
+- Le propriétaire voit le contenu en attente et reçoit une notification de décision.
+- Les dossiers sont priorisés selon le niveau de risque, notamment mineurs, contenus illicites et usurpation.
+
+### Activité et disponibilité
+
+- Velvet n'affiche pas publiquement d'heure exacte de dernière connexion.
+- Un Indice d'Activité synthétique indique si le profil est très actif, actif, occasionnel, peu actif ou en sommeil.
+- L'indice utilise plusieurs signaux d'activité réelle sans devenir un score de popularité.
+- Les profils peu actifs sont dépriorisés ; les profils en sommeil ou abandonnés sont exclus des recommandations.
+- Un Mode Absence permet d'indiquer une pause et, facultativement, une date de retour.
+- Un indicateur de réactivité peut afficher une tendance générale de réponse sans révéler les horaires précis de connexion ou de lecture.
 
 ### Conversations
 
@@ -60,6 +84,7 @@
 - Rappel avant rencontre, sans case obligatoire réduisant le consentement à une formalité.
 - Charte : consentement, droit de changer d'avis, respect du refus, confidentialité, bienveillance, tolérance zéro.
 - Velvet Trust Index multifacteur, non assimilable à un score de popularité.
+- Il n'existe pas de badge ordinaire « Vérifié », puisque la vérification d'identité est obligatoire pour tous.
 
 ### Notifications
 
@@ -71,11 +96,20 @@
 ## Procédure avant nouvelle question produit
 
 1. Rechercher les mots-clés dans ce registre.
-2. Rechercher dans `docs/03-ADR/`, `docs/04-VELVET-CONVERSATIONS/` et `docs/04-FEATURES/`.
+2. Rechercher dans `docs/adr/`, `docs/04-VELVET-CONVERSATIONS/` et `docs/04-FEATURES/`.
 3. Si une décision existe, la considérer comme verrouillée.
 4. Si le besoin est une extension compatible, préciser qu'il s'agit d'une extension.
 5. Si le besoin contredit l'existant, rédiger une proposition d'amendement et identifier l'ADR remplacé.
+6. Après validation, documenter l'ADR, mettre à jour ce registre et créer immédiatement le commit dédié avant de passer à la question suivante.
+
+## ADR récentes
+
+- `ADR-DA-020` : modération hybride IA puis humain.
+- `ADR-DA-021` : pseudonymes libres, nom d'affichage et `@username` unique.
+- `ADR-DA-022` : vérification obligatoire de l'identité et de la majorité.
+- `ADR-DA-023` : Indice d'Activité Velvet, Mode Absence et indicateur de réactivité.
+- `ADR-GOV-001` : une ADR acceptée entraîne une documentation et un commit Git immédiats.
 
 ## Entretien
 
-Ce fichier doit être mis à jour après chaque nouvelle décision majeure. Une pull request qui ajoute un ADR structurant sans mettre à jour ce registre est incomplète.
+Ce fichier doit être mis à jour après chaque nouvelle décision majeure. Une pull request ou un commit qui ajoute un ADR structurant sans mettre à jour ce registre est incomplet.
