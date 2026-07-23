@@ -6,10 +6,10 @@ This directory is the canonical source for Velvet data architecture, domain rule
 
 - [DB-01 — Accounts, identities, profiles and shared profile governance](./DB-01-ACCOUNTS-PROFILES-IDENTITIES.md)
 - [DB-02 — Profile modules, searches, practices, limits and consent](./DB-02-PROFILE-MODULES-SEARCH-PRACTICES-LIMITS-CONSENT.md)
+- [DB-03 — Media, albums, videos and access grants](./DB-03-MEDIA-ALBUMS-VIDEOS-ACCESS-GRANTS.md)
 
 ## Planned chapters
 
-- DB-03 — Media, albums, videos and access grants
 - DB-04 — Conversations, messaging and interaction permissions
 - DB-05 — Geolocation, proximity and discoverability
 - DB-06 — Events, organizers, clubs and professional entities
