@@ -1,16 +1,14 @@
 # Registre des décisions Velvet
 
-**Objectif :** empêcher la réouverture involontaire de sujets déjà arbitrés et orienter rapidement CODEX vers les sources normatives.
+**Objectif :** empêcher la réouverture involontaire de sujets déjà arbitrés et orienter rapidement l'équipe vers les sources normatives.
 
 ## Règles
 
 - Toute décision explicitement validée est considérée comme acquise.
 - Une nouvelle proposition ne remplace une décision existante qu'avec un nouvel ADR indiquant clairement ce qu'elle modifie.
 - Ce registre est un index ; l'ADR reste la source normative.
-- Avant de poser une question produit ou d'ouvrir une issue, rechercher ici puis dans les ADR.
-- Chaque ADR acceptée doit être documentée et réellement commitée avant de poursuivre la discussion produit.
-- « Go commits » signifie appliquer les changements au dépôt GitHub actif, créer les commits réels et communiquer leurs références.
-- La roadmap, les métriques et le changelog produit doivent rester synchronisés avec les ADR acceptées.
+- Avant toute nouvelle question produit, consulter ce registre, `ADR-STATUS.md`, puis les ADR.
+- Chaque ADR acceptée doit être documentée, répercutée dans la roadmap, les métriques et le changelog, puis commitée.
 
 ## Décisions validées — synthèse
 
@@ -18,111 +16,95 @@
 
 - Identité sombre, cinématographique et premium.
 - Logo officiel : V ruban bordeaux/rose, logotype or champagne.
-- Palette canonique documentée dans `docs/01-BRAND/DESIGN-TOKENS.json`.
-- Architecture visuelle hybride entre espaces publics plus ouverts et espaces privés plus intimes.
+- Architecture visuelle hybride entre espaces publics ouverts et espaces privés intimes.
 - Photographie centrée sur les personnes ; albums traités comme des galeries artistiques.
 - Animations pragmatiques ; fluidité prioritaire.
-- Icônes hybrides : bibliothèque standard et icônes Velvet spécifiques.
-- Illustrations minimalistes, sans mascotte ni style cartoon.
-- Une signature sonore uniquement à l'ouverture.
-- Cartes premium avec identité commune et déclinaisons par usage.
-
-### Accueil et découverte
-
-- Accueil sous forme de découverte intelligente personnalisée.
-- Catégories et filtres restent accessibles pour les recherches ciblées.
-- Ne pas rouvrir ce choix sans nouvelle décision formelle.
-- Les profils abandonnés ou durablement inactifs sont progressivement retirés des recommandations.
 
 ### Comptes, identité et profils
 
 - Trois types de comptes : Membre, Organisateur privé, Professionnel.
-- La vérification d'identité et de majorité est obligatoire avant l'accès complet à Velvet.
-- L'identité civile vérifiée reste privée ; le pseudonyme constitue l'identité publique.
-- Chaque profil dispose d'un nom d'affichage libre et d'un `@username` unique et stable.
-- Les pseudonymes liés aux codes du libertinage sont autorisés ; seuls les contenus illégaux, haineux, liés aux mineurs, frauduleux, usurpateurs ou manifestement abusifs sont refusés.
-- Tous les profils conservent la même qualité visuelle, sans hiérarchie graphique liée à l'ancienneté ou à la popularité.
-- L'ancienneté peut être mise en avant après une durée significative.
-- Vidéo de présentation facultative.
-- Contenus épinglés autorisés et contrôlés par le membre.
-- Profils Couple dynamiques : identité Couple et partenaires individuels activables indépendamment.
-- Carte Couple : photo commune et portraits individuels.
-- Albums publics et privés déjà arbitrés ; ne pas rouvrir leur principe sans consulter les ADR associés.
+- Vérification d'identité et de majorité obligatoire avant accès complet.
+- Identité civile privée ; pseudonyme comme identité publique.
+- Nom d'affichage libre et `@username` unique et stable.
+- Profils Couple dynamiques avec identité commune et partenaires activables individuellement.
 
-### Modération
+### Modération, activité et confidentialité
 
-- Modération hybride avec première vérification par IA.
-- Les cas ambigus, sensibles, signalés ou à risque sont transmis à un modérateur humain.
-- Pendant la validation d'un remplacement, l'ancien contenu approuvé reste visible.
-- Le propriétaire voit le contenu en attente et reçoit une notification de décision.
-- Les dossiers sont priorisés selon le niveau de risque, notamment mineurs, contenus illicites et usurpation.
+- Modération hybride avec première vérification par IA et revue humaine des cas sensibles.
+- Aucun affichage public de dernière connexion exacte.
+- Velvet Activity Index synthétique, Mode Absence et tendance de réactivité.
+- Notifications push configurables et modes Standard, Discret et Invisible.
 
-### Activité et disponibilité
+### Conversations, consentement et confiance
 
-- Velvet n'affiche pas publiquement d'heure exacte de dernière connexion.
-- Un Indice d'Activité synthétique indique si le profil est très actif, actif, occasionnel, peu actif ou en sommeil.
-- L'indice utilise plusieurs signaux d'activité réelle sans devenir un score de popularité.
-- Les profils peu actifs sont dépriorisés ; les profils en sommeil ou abandonnés sont exclus des recommandations.
-- Un Mode Absence permet d'indiquer une pause et, facultativement, une date de retour.
-- Un indicateur de réactivité peut afficher une tendance générale de réponse sans révéler les horaires précis de connexion ou de lecture.
-
-### Conversations
-
-- Cycle : Découverte → Conversation → Confiance → Expériences → Souvenirs → Relation durable.
+- Cycle produit : Découverte → Conversation → Confiance → Expériences → Souvenirs → Relation durable.
 - Invitation Velvet obligatoire avant création du Salon.
-- Aucune relance d'invitation.
-- Statuts d'invitation et de messages définis.
-- Accusés de lecture réciproques, sans heure précise de lecture.
-- Ouverture sur la dernière activité non lue.
-- Onglets Messages et Histoire.
-- Participants modifiables par consentement unanime.
-- Capture d'écran signalée uniquement lorsque le système le permet.
-- Première rencontre réelle confirmée indépendamment avant inscription dans l'histoire partagée.
+- Pacte Velvet personnel et contextuel par Salon.
+- Velvet Trust Index multifacteur sans score public de popularité.
 
-### Consentement et confiance
+### Recherche et découverte — ADR-024 à ADR-036
 
-- Pacte Velvet personnel, modifiable et contextuel par Salon.
-- Rappel avant rencontre, sans case obligatoire réduisant le consentement à une formalité.
-- Charte : consentement, droit de changer d'avis, respect du refus, confidentialité, bienveillance, tolérance zéro.
-- Velvet Trust Index multifacteur, non assimilable à un score de popularité.
-- Il n'existe pas de badge ordinaire « Vérifié », puisque la vérification d'identité est obligatoire pour tous.
+- Découverte hybride : recommandations, recherche manuelle et filtres avancés ; swipe facultatif.
+- Recommandations explicables, dynamiques et personnalisables.
+- Apprentissage comportemental désactivable.
+- Compatibilité réciproque plutôt qu'attractivité unilatérale.
+- Qualité avant quantité dans le flux initial.
+- Carte premium avec clustering, filtres, localisation approximative et mode invisible.
+- Velvet Alchemy Index qualitatif, sans pourcentage.
+- État d'esprit temporaire du membre intégré au contexte.
+- Cercle de confiance privé.
+- Réputation de sécurité strictement invisible.
+- Carnet de Souvenirs partagé uniquement avec consentement unanime.
+- Événements intelligents avec préparation, check-in et suivi post-événement.
+- Présence confirmable par QR, géolocalisation ponctuelle consentie, organisateur ou communauté validée.
 
-### Notifications
+### Professionnels et voyages — ADR-038 à ADR-041
 
-- Push mobile requis même application fermée.
-- Catégories configurables.
-- Trois modes de confidentialité : Standard, Discret, Invisible.
-- Pas de spam et respect des périodes calmes.
+- Assistant IA dédié aux organisateurs avant, pendant et après les événements.
+- CRM métier modulaire avec socle commun et extensions par profession.
+- IA métier personnalisée à partir des contenus validés du professionnel.
+- Velvet Trips comme espace communautaire avant, pendant et après un voyage.
+- Les professionnels n'accèdent jamais à la recherche privée des profils ni aux données non autorisées.
+
+### Monétisation
+
+- Le modèle freemium, les essais, promotions, codes administrateur et mécanismes de parrainage ont déjà été arbitrés.
+- ADR-042 n'a pas été créée afin de ne pas rouvrir ce sujet.
+
+### Gamification — ADR-043 et ADR-044
+
+- Gamification positive centrée sur la confiance, la qualité et la participation utile.
+- Aucun classement public, score de popularité ou récompense fondée sur le volume de matchs et messages.
+- Distinctions évolutives racontant le parcours du membre sans niveaux compétitifs.
+- Aucun système Bronze, Argent, Or ou Diamant.
+- Les distinctions ne remplacent jamais la modération ni les indicateurs internes de sécurité.
 
 ### Gouvernance et pilotage
 
-- Une seule question produit structurante est traitée à la fois.
-- Une ADR acceptée est définitive sauf amendement explicite par une nouvelle ADR.
-- `PROJECT-ROADMAP.md` est la source officielle de l'état du projet, du domaine actif et de l'ordre de traitement.
-- `PRODUCT-METRICS.md` porte les estimations d'avancement par domaine.
-- `CHANGELOG-PRODUCT.md` conserve l'historique daté des évolutions produit validées.
-- Après chaque ADR acceptée, ces trois fichiers et le présent registre doivent être mis à jour avant de poursuivre.
-- Les pourcentages d'avancement ne changent qu'après clôture d'une ADR ou d'un lot fonctionnel significatif.
-
-## Procédure avant nouvelle question produit
-
-1. Rechercher les mots-clés dans ce registre.
-2. Rechercher dans `docs/adr/`, `docs/04-VELVET-CONVERSATIONS/` et `docs/04-FEATURES/`.
-3. Consulter `PROJECT-ROADMAP.md` pour confirmer le domaine actif et la priorité.
-4. Si une décision existe, la considérer comme verrouillée.
-5. Si le besoin est une extension compatible, préciser qu'il s'agit d'une extension.
-6. Si le besoin contredit l'existant, rédiger une proposition d'amendement et identifier l'ADR remplacé.
-7. Après validation, documenter l'ADR, mettre à jour le registre, la roadmap, les métriques et le changelog, puis créer immédiatement le commit dédié avant de passer à la question suivante.
+- Une seule question produit structurante à la fois.
+- Une ADR acceptée est définitive sauf amendement explicite.
+- `PROJECT-ROADMAP.md` est la source officielle de l'état du projet.
+- `PRODUCT-METRICS.md` porte les estimations d'avancement.
+- `CHANGELOG-PRODUCT.md` conserve l'historique daté.
+- `ADR-STATUS.md` permet de vérifier rapidement les sujets déjà couverts.
 
 ## ADR récentes
 
 - `ADR-DA-020` : modération hybride IA puis humain.
-- `ADR-DA-021` : pseudonymes libres, nom d'affichage et `@username` unique.
+- `ADR-DA-021` : pseudonymes et identifiants publics.
 - `ADR-DA-022` : vérification obligatoire de l'identité et de la majorité.
-- `ADR-DA-023` : Indice d'Activité Velvet, Mode Absence et indicateur de réactivité.
-- `ADR-GOV-001` : une ADR acceptée entraîne une documentation et un commit Git immédiats.
-- `ADR-GOV-002` : pilotage continu par roadmap, métriques, changelog et domaine actif.
+- `ADR-DA-023` : Velvet Activity Index.
+- `ADR-DA-024-036` : découverte intelligente, alchimie, confiance, souvenirs et événements.
+- `ADR-PRO-038-041` : IA organisateur, CRM métier, IA professionnelle et voyages.
+- `ADR-GAM-043-044` : gamification positive et distinctions évolutives.
+- `ADR-GOV-001` : documentation et commit immédiats après acceptation.
+- `ADR-GOV-002` : pilotage continu par roadmap, métriques et changelog.
+
+## Numéros non créés
+
+- `ADR-037` : proposition abandonnée car le sujet professionnel était déjà arbitré.
+- `ADR-042` : proposition abandonnée car la monétisation était déjà arbitrée.
 
 ## Entretien
 
-Ce fichier doit être mis à jour après chaque nouvelle décision majeure. Une pull request ou un commit qui ajoute un ADR structurant sans mettre à jour les documents de pilotage est incomplet.
+Une évolution structurante sans mise à jour des documents de pilotage est incomplète.
