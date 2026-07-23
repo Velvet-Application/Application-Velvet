@@ -10,6 +10,7 @@
 - Avant de poser une question produit ou d'ouvrir une issue, rechercher ici puis dans les ADR.
 - Chaque ADR acceptée doit être documentée et réellement commitée avant de poursuivre la discussion produit.
 - « Go commits » signifie appliquer les changements au dépôt GitHub actif, créer les commits réels et communiquer leurs références.
+- La roadmap, les métriques et le changelog produit doivent rester synchronisés avec les ADR acceptées.
 
 ## Décisions validées — synthèse
 
@@ -93,14 +94,25 @@
 - Trois modes de confidentialité : Standard, Discret, Invisible.
 - Pas de spam et respect des périodes calmes.
 
+### Gouvernance et pilotage
+
+- Une seule question produit structurante est traitée à la fois.
+- Une ADR acceptée est définitive sauf amendement explicite par une nouvelle ADR.
+- `PROJECT-ROADMAP.md` est la source officielle de l'état du projet, du domaine actif et de l'ordre de traitement.
+- `PRODUCT-METRICS.md` porte les estimations d'avancement par domaine.
+- `CHANGELOG-PRODUCT.md` conserve l'historique daté des évolutions produit validées.
+- Après chaque ADR acceptée, ces trois fichiers et le présent registre doivent être mis à jour avant de poursuivre.
+- Les pourcentages d'avancement ne changent qu'après clôture d'une ADR ou d'un lot fonctionnel significatif.
+
 ## Procédure avant nouvelle question produit
 
 1. Rechercher les mots-clés dans ce registre.
 2. Rechercher dans `docs/adr/`, `docs/04-VELVET-CONVERSATIONS/` et `docs/04-FEATURES/`.
-3. Si une décision existe, la considérer comme verrouillée.
-4. Si le besoin est une extension compatible, préciser qu'il s'agit d'une extension.
-5. Si le besoin contredit l'existant, rédiger une proposition d'amendement et identifier l'ADR remplacé.
-6. Après validation, documenter l'ADR, mettre à jour ce registre et créer immédiatement le commit dédié avant de passer à la question suivante.
+3. Consulter `PROJECT-ROADMAP.md` pour confirmer le domaine actif et la priorité.
+4. Si une décision existe, la considérer comme verrouillée.
+5. Si le besoin est une extension compatible, préciser qu'il s'agit d'une extension.
+6. Si le besoin contredit l'existant, rédiger une proposition d'amendement et identifier l'ADR remplacé.
+7. Après validation, documenter l'ADR, mettre à jour le registre, la roadmap, les métriques et le changelog, puis créer immédiatement le commit dédié avant de passer à la question suivante.
 
 ## ADR récentes
 
@@ -109,7 +121,8 @@
 - `ADR-DA-022` : vérification obligatoire de l'identité et de la majorité.
 - `ADR-DA-023` : Indice d'Activité Velvet, Mode Absence et indicateur de réactivité.
 - `ADR-GOV-001` : une ADR acceptée entraîne une documentation et un commit Git immédiats.
+- `ADR-GOV-002` : pilotage continu par roadmap, métriques, changelog et domaine actif.
 
 ## Entretien
 
-Ce fichier doit être mis à jour après chaque nouvelle décision majeure. Une pull request ou un commit qui ajoute un ADR structurant sans mettre à jour ce registre est incomplet.
+Ce fichier doit être mis à jour après chaque nouvelle décision majeure. Une pull request ou un commit qui ajoute un ADR structurant sans mettre à jour les documents de pilotage est incomplet.
