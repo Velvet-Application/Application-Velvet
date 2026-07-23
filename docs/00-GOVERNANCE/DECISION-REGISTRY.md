@@ -79,6 +79,14 @@
 - Aucun système Bronze, Argent, Or ou Diamant.
 - Les distinctions ne remplacent jamais la modération ni les indicateurs internes de sécurité.
 
+### Distribution technique V1 — ADR-TECH-045
+
+- Velvet V1 est une application web responsive mobile-first installable en PWA.
+- Les applications natives iOS et Android sont exclues du périmètre V1.
+- L'installation reste facultative et l'usage complet doit rester possible depuis un navigateur.
+- Les limitations propres aux navigateurs et systèmes doivent être affichées honnêtement.
+- Aucune donnée intime ni média privé ne doit être mis en cache sans politique explicite.
+
 ### Gouvernance et pilotage
 
 - Une seule question produit structurante à la fois.
@@ -97,6 +105,7 @@
 - `ADR-DA-024-036` : découverte intelligente, alchimie, confiance, souvenirs et événements.
 - `ADR-PRO-038-041` : IA organisateur, CRM métier, IA professionnelle et voyages.
 - `ADR-GAM-043-044` : gamification positive et distinctions évolutives.
+- `ADR-TECH-045` : application web responsive installable en PWA pour la V1.
 - `ADR-GOV-001` : documentation et commit immédiats après acceptation.
 - `ADR-GOV-002` : pilotage continu par roadmap, métriques et changelog.
 
