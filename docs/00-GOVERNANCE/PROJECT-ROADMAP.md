@@ -7,20 +7,13 @@
 ## Règles de gouvernance
 
 - Une seule décision structurante est traitée à la fois.
-- Une ADR validée est définitive et ne peut être rouverte sans nouvelle ADR d'amendement.
-- Chaque ADR validée déclenche immédiatement :
-  1. la création ou mise à jour de l'ADR ;
-  2. la mise à jour du registre des décisions ;
-  3. la mise à jour de cette roadmap ;
-  4. la mise à jour des métriques produit ;
-  5. la mise à jour du changelog produit ;
-  6. un commit Git dédié.
+- Une ADR validée est définitive et ne peut être rouverte sans ADR d'amendement.
+- Chaque ADR validée déclenche la documentation, la mise à jour des référentiels et un commit Git.
 - Les sujets clôturés ne doivent pas être reproposés.
-- Le domaine en cours doit rester prioritaire jusqu'à verrouillage suffisant.
 
 ## Légende
 
-- 🟢 Clôturé
+- 🟢 Clôturé ou suffisamment verrouillé
 - 🟡 En cours / partiellement arbitré
 - ⚪ À traiter
 
@@ -28,23 +21,24 @@
 
 | Domaine | Statut | Avancement | Commentaire |
 |---|---:|---:|---|
-| Vision & positionnement | 🟢 | 100 % | ADN, valeurs, positionnement premium et philosophie produit verrouillés. |
-| Branding & UX | 🟢 | 100 % | Identité visuelle, design tokens, animations, icônes, illustrations et signature sonore validés. |
-| Comptes & profils | 🟢 | 95 % | Types de comptes, profils dynamiques, pseudonymes, vérification d'identité et cycle de vie définis. |
-| Conversations | 🟢 | 95 % | Invitations, Salon Velvet, Carnet, histoire, consentement et comportements de lecture définis. |
-| Sécurité & modération | 🟢 | 90 % | Modération IA-first, revue humaine et vérification obligatoire définies. Sanctions progressives à préciser. |
-| Notifications & confidentialité | 🟢 | 95 % | Push, catégories, périodes calmes et modes de confidentialité définis. |
-| Recherche & découverte | 🟡 | 70 % | Principes de recommandation, filtres et activité définis. Matching et contextualisation restent à arbitrer. |
-| Événements | 🟡 | 60 % | Fondations posées. Création, inscriptions, paiements, listes d'attente, check-in, accès et avis restent à verrouiller. |
-| Clubs | 🟡 | 55 % | Positionnement posé. Modèle fonctionnel et économique à détailler. |
-| Professionnels | 🟡 | 50 % | Rôle défini. Offres, visibilité, outils et monétisation à arbitrer. |
-| Administration / back-office | 🟡 | 40 % | Périmètre identifié. Workflows, rôles, journaux et dashboards à spécifier. |
-| IA Velvet | 🟡 | 40 % | Modération couverte. Recherche, matching, recommandations et assistance restent à définir. |
-| Monétisation | 🟡 | 60 % | Philosophie d'abonnement, devise et promotions validées. Offres détaillées restantes. |
-| Gamification | ⚪ | 25 % | Badges, succès, ancienneté et récompenses à cadrer sans créer de popularité toxique. |
-| Mobile avancé | ⚪ | 50 % | Web-first et notifications validés. Fonctions natives avancées à prioriser plus tard. |
-| Analytics | ⚪ | 20 % | KPI produit, tableaux de bord et gouvernance des données à définir. |
-| Juridique & conformité | 🟡 | 40 % | Consentement et identité cadrés. CGU, RGPD, conservation et droits utilisateurs à formaliser. |
+| Vision & positionnement | 🟢 | 100 % | ADN, valeurs et positionnement premium verrouillés. |
+| Branding & UX | 🟢 | 100 % | Identité visuelle et principes d'interface validés. |
+| Comptes & profils | 🟢 | 95 % | Types de comptes, identité, pseudonymes et profils dynamiques définis. |
+| Conversations | 🟢 | 95 % | Invitations, Salons, consentement, histoire et souvenirs définis. |
+| Sécurité & modération | 🟢 | 90 % | Modération IA-first, revue humaine et vérification obligatoire définies. |
+| Notifications & confidentialité | 🟢 | 95 % | Push, catégories et modes de confidentialité définis. |
+| Recherche & découverte | 🟢 | 95 % | Recommandation explicable, réciproque, dynamique, carte premium et Alchimie verrouillées. |
+| Événements | 🟢 | 90 % | Cycle avant/pendant/après et quatre méthodes de confirmation de présence définis. |
+| Clubs | 🟡 | 70 % | Intégrés à la carte, aux événements et au socle professionnel ; détails opérationnels restants. |
+| Professionnels | 🟢 | 90 % | Interface dédiée, CRM modulaire, IA métier et outils organisateur définis. |
+| Voyages Velvet | 🟢 | 90 % | Espace communautaire complet avant, pendant et après le voyage. |
+| Administration / back-office | 🟡 | 40 % | Workflows, rôles, journaux et dashboards à détailler. |
+| IA Velvet | 🟡 | 75 % | Recommandation, Alchimie et assistants professionnels définis ; gouvernance technique restante. |
+| Monétisation | 🟡 | 70 % | Freemium, essais, promotions, codes et parrainage déjà arbitrés. |
+| Gamification | 🟡 | 70 % | Philosophie positive et distinctions évolutives verrouillées ; règles détaillées restantes. |
+| Mobile avancé | ⚪ | 50 % | Web-first et notifications validés ; fonctions natives à prioriser. |
+| Analytics | ⚪ | 20 % | KPI et gouvernance des données à définir. |
+| Juridique & conformité | 🟡 | 40 % | Consentement et identité cadrés ; formalisation documentaire restante. |
 | Développement complet | ⚪ | 0 % | Démarrera après verrouillage suffisant de l'architecture produit. |
 | Recette | ⚪ | 0 % | À préparer après première version intégrée. |
 | Pré-production | ⚪ | 0 % | À préparer après recette. |
@@ -52,46 +46,41 @@
 
 ## Avancement global de référence
 
-**Architecture produit estimée : 64 %.**
+**Architecture produit estimée : 80 %.**
 
-Ce pourcentage est un indicateur de pilotage, pas une mesure automatisée. Il doit être réévalué uniquement lorsqu'une ADR ou un lot fonctionnel structurant est clôturé.
+Cet indicateur mesure les arbitrages structurants et non le développement logiciel.
 
-## Ordre de traitement verrouillé
+## Lots récemment clôturés
 
-1. Recherche & Découverte
-2. Événements
-3. Clubs
-4. Professionnels
-5. Administration / Back-office
-6. IA Velvet
-7. Monétisation avancée
-8. Gamification
-9. Mobile avancé
-10. Analytics
-11. Juridique & conformité
-12. Développement complet
-13. Recette
-14. Pré-production
-15. Lancement
+- ADR-024 à ADR-036 : recherche, découverte, confiance, souvenirs et événements intelligents.
+- ADR-038 à ADR-041 : outils professionnels, IA métier et Velvet Trips.
+- ADR-043 à ADR-044 : gamification positive et distinctions évolutives.
+
+ADR-037 et ADR-042 ne sont pas des décisions manquantes : leurs propositions ont été abandonnées car les sujets étaient déjà arbitrés.
+
+## Ordre de traitement actualisé
+
+1. Finaliser la Gamification
+2. Administration / Back-office
+3. IA Velvet — gouvernance et contrôles
+4. Monétisation avancée — détail des offres
+5. Clubs — modèle opérationnel détaillé
+6. Mobile avancé
+7. Analytics
+8. Juridique & conformité
+9. Développement complet
+10. Recette
+11. Pré-production
+12. Lancement
 
 ## Domaine actif
 
-**Recherche & Découverte**
+**Gamification**
 
 ### Prochain objectif
 
-Verrouiller le fonctionnement du moteur de découverte avant de passer au domaine Événements.
-
-### Sujets à arbitrer dans ce domaine
-
-- logique du matching intelligent ;
-- poids de la proximité, de l'activité et des compatibilités ;
-- personnalisation contextuelle ;
-- diversité des recommandations ;
-- prévention des bulles et de la sur-exposition ;
-- contrôle utilisateur sur les recommandations ;
-- explicabilité minimale des suggestions.
+Préciser l'affichage, les critères, la confidentialité et le cycle de vie des distinctions sans rouvrir ADR-043 ni ADR-044.
 
 ## Discipline de mise à jour
 
-Ce document doit être mis à jour après chaque ADR validée. Une évolution produit structurante sans mise à jour de la roadmap est considérée comme incomplète.
+Ce document doit être mis à jour après chaque ADR validée.
