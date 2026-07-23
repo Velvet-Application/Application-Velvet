@@ -2,7 +2,14 @@
 
 This directory is the canonical source for Velvet data architecture, domain rules, permissions, constraints, security boundaries and implementation order.
 
-## Chapters
+## Cross-cutting contract
+
+- [DB-00 — Cross-cutting data contract and coherence review](./DB-00-CROSS-CUTTING-DATA-CONTRACT.md)
+- [Schema implementation manifest](./SCHEMA-IMPLEMENTATION-MANIFEST.md)
+
+DB-00 has precedence when a cross-domain naming, authorization, audit, classification, retention or lifecycle convention requires clarification.
+
+## Domain chapters
 
 - [DB-01 — Accounts, identities, profiles and shared profile governance](./DB-01-ACCOUNTS-PROFILES-IDENTITIES.md)
 - [DB-02 — Profile modules, searches, practices, limits and consent](./DB-02-PROFILE-MODULES-SEARCH-PRACTICES-LIMITS-CONSENT.md)
@@ -17,8 +24,22 @@ This directory is the canonical source for Velvet data architecture, domain rule
 
 ## Status
 
-The ten domain chapters are now drafted. Before implementation, the Bible must pass a cross-chapter consistency review covering naming, enumerations, foreign keys, data classification, retention rules, permissions and unresolved product decisions.
+The cross-chapter consistency review is complete.
+
+The Database Bible now defines:
+
+- canonical ownership and actor attribution;
+- naming and identifier conventions;
+- enum and catalog strategy;
+- authorization and visibility precedence;
+- shared-profile governance;
+- consent and data classification rules;
+- audit, retention, deletion and anonymization boundaries;
+- RLS foundations;
+- ordered migration phases, tests and CI quality gates.
+
+The documentation is ready to drive executable PostgreSQL/Supabase schema implementation through Codex.
 
 ## Rule
 
-No migration or domain implementation may contradict an accepted chapter without a new documented architecture decision.
+No migration or domain implementation may contradict DB-00 or an accepted domain chapter without a new documented architecture decision.
