@@ -75,10 +75,13 @@ begin
      and p.profile_id=case when b.profile_id=source_profile then target_profile else source_profile end
     where b.profile_id in (source_profile,target_profile)
       and b.level='hard_limit'
-      and p.level in ('interested','curious','desired','enthusiastic')
+      and p.level in ('curious','interested','desired','experienced')
   ) x;
 
-  select count(*), count(*) filter(where a.level=b.level or (a.level in ('desired','enthusiastic') and b.level in ('desired','enthusiastic')))
+  select count(*), count(*) filter(
+    where a.level=b.level
+       or (a.level in ('desired','experienced') and b.level in ('desired','experienced'))
+  )
   into compared_count, compatible_count
   from public.profile_taxonomy_preferences a
   join public.profile_taxonomy_preferences b on b.taxonomy_item_id=a.taxonomy_item_id
@@ -89,7 +92,7 @@ begin
   from public.profile_taxonomy_preferences a
   join public.profile_taxonomy_preferences b on b.taxonomy_item_id=a.taxonomy_item_id
   where a.profile_id=source_profile and b.profile_id=target_profile
-    and a.level in ('desired','enthusiastic') and b.level in ('desired','enthusiastic');
+    and a.level in ('desired','experienced') and b.level in ('desired','experienced');
 
   select coalesce(jsonb_agg(jsonb_build_object('taxonomy_item_id',taxonomy_item_id,'reason','conditional_boundary')),'[]'::jsonb)
   into discussions
