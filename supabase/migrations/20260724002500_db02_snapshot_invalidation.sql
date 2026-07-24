@@ -1,14 +1,14 @@
 begin;
 
-create or replace function private.invalidate_profile_compatibility_snapshots(target_profile_id uuid)
+create or replace function private.invalidate_profile_compatibility_snapshots(p_profile_id uuid)
 returns void
 language sql
 security definer
 set search_path = public, pg_temp
 as $$
-  delete from public.profile_compatibility_snapshots
-  where source_profile_id = target_profile_id
-     or target_profile_id = target_profile_id;
+  delete from public.profile_compatibility_snapshots pcs
+  where pcs.source_profile_id = p_profile_id
+     or pcs.target_profile_id = p_profile_id;
 $$;
 
 create or replace function private.invalidate_compatibility_from_preference_change()
